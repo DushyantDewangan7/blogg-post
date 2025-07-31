@@ -1,8 +1,21 @@
 {
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Blog backend using native MongoDB driver",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^5.1.0",
-    "mongoose": "^8.16.4",
+    "mongodb": "^4.16.0"
+  },
+  "devDependencies": {
     "nodemon": "^3.1.10"
-  }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

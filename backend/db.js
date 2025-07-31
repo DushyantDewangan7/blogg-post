@@ -1,11 +1,13 @@
-const mongoose = require('mongoose');
+// db.js
+let db = null;
 
-const connectToMongo = async () => {
-    try {
-        await mongoose.connect("mongodb://localhost:27017/blogg")
-        console.log('Connected to MongoDB')
-    } catch (error) {
-        console.error('Error connecting to MongoDB:', error.message)
-    }
+function setDB(database) {
+  db = database;
 }
-module.exports = connectToMongo
+
+function getDB() {
+  if (!db) throw new Error("Database not initialized yet!");
+  return db;
+}
+
+module.exports = { setDB, getDB };
